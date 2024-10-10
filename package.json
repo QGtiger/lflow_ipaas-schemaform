@@ -1,0 +1,44 @@
+{
+  "name": "@lightfish/ipaas-schemaform",
+  "version": "1.0.0",
+  "description": "ipaas-schemaform",
+  "types": "./dist/index.d.ts",
+  "style": "./dist/index.css",
+  "files": [
+    "dist/*"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": {
+      "import": "./dist/index.css"
+    }
+  },
+  "scripts": {
+    "buildTailWindCss": "tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "build": "tsup && npm run buildTailWindCss && cp src/type.d.ts dist/type.d.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.3.11",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.4.13",
+    "tsup": "^8.3.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.1",
+    "@monaco-editor/react": "^4.6.0",
+    "ahooks": "^3.8.1",
+    "antd": "5.20.6",
+    "classnames": "^2.5.1",
+    "github-markdown-css": "^5.7.0",
+    "react": "^18.1.0",
+    "react-markdown": "^9.0.1"
+  }
+}
