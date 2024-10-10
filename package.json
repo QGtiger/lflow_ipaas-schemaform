@@ -1,6 +1,6 @@
 {
   "name": "@lightfish/ipaas-schemaform",
-  "version": "1.0.0",
+  "version": "1.0.1-beta.2",
   "description": "ipaas-schemaform",
   "types": "./dist/index.d.ts",
   "style": "./dist/index.css",
@@ -15,12 +15,15 @@
     "./styles.css": {
       "import": "./dist/index.css"
     },
+    "./tailwind.css": {
+      "import": "./dist/tailwind.css"
+    },
     "./type.d.ts": {
       "import": "./dist/type.d.ts"
     }
   },
   "scripts": {
-    "buildTailWindCss": "tailwindcss -i ./src/index.css -o ./dist/index.css",
+    "buildTailWindCss": "tailwindcss -i ./src/index.css -o ./dist/tailwind.css",
     "build": "tsup && npm run buildTailWindCss && cp src/type.d.ts dist/type.d.ts"
   },
   "keywords": [],
